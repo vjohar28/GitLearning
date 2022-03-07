@@ -50,7 +50,7 @@ fi
 START=${1:-'FAIL'}
 END=${2:-'CHERRY'}
 if [ "$1" == 'FAIL' ]; then
-    echo "BRANCH2"
+    echo "feature"
     exit 1;
 fi
 if [ "$START" == '--continue' ]; then
