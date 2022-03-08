@@ -1,24 +1,5 @@
 #!/bin/bash
 
-# Author: Thomas Berezansky <tsbere@mvlc.org>
-# Author: Jason Stephenson <jason@sigio.com>
-#
-# Feel free to use and to share this script in anyway you like.
-
-# This script is intended as a shortcut for the git cherry-pick
-# command when you have several commits that you want to cherry-pick
-# into your local branch from another branch.  It often results in a
-# cleaner commit history than simply doing a git merge.
-
-# It can be run in two ways and either method takes an optional
-# parameter, -s.  If provided the -s parameter will add your git
-# signature to each incoming commit as they are cherry-picked.  This
-# is a handy way to sign off on someone else's commits in bulk when
-# your project has a policy of requiring sign offs on anything going
-# into the main git repository.  If you supply the -s parameter, it
-# should come before any branch or commit arguments on the command
-# line.
-
 # The simpler way to run this script is to simply supply the branch
 # name whose commits you want to cherry-pick into your current branch.
 # For instance, if you want to cherry-pick the commits from branch
@@ -69,11 +50,7 @@ fi
 START=${1:-'FAIL'}
 END=${2:-'CHERRY'}
 if [ "$1" == 'FAIL' ]; then
-<<<<<<< HEAD:git-quickpick.sh
-    echo "NEED SOURCE BRANCH"
-=======
     echo "feature"
->>>>>>> c13f74d66aa2202def7d155ad171a2a99b2a2231:script.bat
     exit 1;
 fi
 if [ "$START" == '--continue' ]; then
